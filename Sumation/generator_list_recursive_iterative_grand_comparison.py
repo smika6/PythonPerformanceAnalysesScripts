@@ -81,9 +81,9 @@ def analyse_time_memory_of_list_sumation(function):
         print( 'Memory (Before): {} Mb'.format(mem) )
         print( 'Memory (After): {} Mb'.format(mem2) )
         print( 'Memory (Difference): {} Mb'.format(  str( abs( mem2[0] - mem[0] ) ) ) )
-        print(   'Time to create {} fibonachi numbers: {} Seconds'.format( terms, time_create  )    )
-        print(   'Time to add {} fibonachi numbers: {} Seconds'.format( terms, time_total - time_create  )    )
-        print(   'Time to create and add {} fibonachi numbers: {} Seconds'.format( terms, time_total  )    )
+        print(   'Time to create {} numbers: {} Seconds'.format( terms, time_create  )    )
+        print(   'Time to add {} numbers: {} Seconds'.format( terms, time_total - time_create  )    )
+        print(   'Time to create and add {} numbers: {} Seconds'.format( terms, time_total  )    )
         
         return lst
     return analyse
@@ -130,7 +130,7 @@ def test_memoise_recursive_list(terms):
 @analyse_time_memory_of_list_sumation
 def test_iterative_list(terms):
     
-    print("\n\nIterative list w/ Generator")
+    print("\n\nIterative list")
     
     fib = fibonachi_iterative_list(terms)
     
